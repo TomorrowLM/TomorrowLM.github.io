@@ -94,7 +94,9 @@ function dark() {
               h.rect(this.x, this.y, this.r, this.r);
           h.closePath(), h.fill();
         } else {
-          if ((h.beginPath(), this.giant)) h.fillStyle = randomRgbaColor();
+          if ((h.beginPath(), this.giant))
+            (h.fillStyle = "rgba(" + a + "," + this.opacity + ")"),
+              h.arc(this.x, this.y, 10, 0, 2 * Math.PI, !1);
           else if (this.comet) {
             (h.fillStyle = randomRgbaColor()),
               h.arc(this.x, this.y, 1.5, 0, 2 * Math.PI, !1);
